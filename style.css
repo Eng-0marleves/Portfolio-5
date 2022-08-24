@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* ===============================
+Globale Section Styling Start
+=============================== */
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --main-color: rgba(189, 255, 0, 1);
+    --dark-color: rgba(58, 58, 58, 1);
+}
+::-webkit-scrollbar {
+    width: 12px;
+    background: linear-gradient(var(--main-color), var(--dark-color));
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    background: var(--dark-color);
+    height: 100px;
+}
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+section {
+    height: 100vh;
+    width: 100%;
+}
+.title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* ===============================
+Globale Section Styling End
+=============================== */
+
+
+/* ===============================
+Nav Section Styling Start
+=============================== */
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark-color);
+    padding: 10px 20px;
+    transition: all .3s ease-in-out;
+    z-index: 100;
+}
+nav.active {
+    box-shadow: 0 3px 20px var(--main-color);
+}
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    user-select: none;
+    height: fit-content;
+    /* background: linear-gradient(to right, var(--dark-color) 30%, var(--main-color)70%); */
+    background: linear-gradient(to right, #fff, var(--main-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+nav ul li a {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: var(--main-color);
+}
+nav ul li a.active {
+    color: var(--main-color);
+}
+.close,.menue {
+    color: #fff;
+    font-size: 1.7em;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+.close:hover,.menue:hover {
+    color: var(--main-color);
+} 
+/* ===============================
+Nav Section Styling End
+=============================== */
+
+
+/* ===============================
+Home Section Styling Start
+=============================== */
+.home {
+    height: 100vh;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--dark-color);
+}
+.home p:not(:first-child) {
+    margin-top: 20px;
+}
+.home .hello {
+    font-size: 2em;
+    color: #fff;
+}
+.home .about {
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.home .lorem {
+    width: 50%;
+    color: #fff;
+    font-weight: bold;
+}
+.home .btns {
+    margin-top: 1.3em;
+    display: flex;
+    flex-wrap: wrap;
+}
+.home .btns .btn {
+    margin-top: 1.2em;
+    margin-right: 2.2em;
+    background: var(--main-color);
+    color: #000;
+    border: 5px solid var(--main-color);
+    padding: 1.2em;
+    border-radius: 1.2em;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out; 
+}
+.home .btns .btn:hover {
+    background: var(--dark-color);
+    color: var(--main-color);
+}
+/* ===============================
+Home Section Styling End
+=============================== */
+
+
+/* ===============================
+About Section Styling Start
+=============================== */
+.about {
+    height: fit-content;
+}
+.about img {
+    width: 100%;
+}
+.about .container {
+    padding: 0 20px;
+    padding-bottom: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about .container .card  {
+    width: 300px;
+    height: fit-content;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 5px -2px var(--dark-color);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+}
+.about .container .card:hover {
+    box-shadow: 0 0 10px -2px var(--dark-color);
+}
+.about .container .card i {
+    font-size: 4em;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.about .container .card .skill {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* ===============================
+About Section Styling End
+=============================== */
+
+
+/* ===============================
+portfolio Section Styling Start
+=============================== */
+.portfolio {
+    background: var(--dark-color);
+    padding: 15vh 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(var(--main-color) 70%, var(--dark-color));
+}
+.swiper {
+    width: 90%;
+    height: 80vh;
+}
+.swiper-slide {
+    height: fit-content;
+    border-radius: 20px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover !important;
+}
+.swiper-v {
+    background: #eee;
+}
+.swiper-pagination-bullet {
+    background: var(--dark-color);
+    border-radius: 40%;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px 2px var(--main-color);
+}
+.swiper-pagination-bullet-active {
+    width: 2em;
+    border-radius: 5px;
+}
+.swiper-pagination-vertical .swiper-pagination-bullet-active {
+    width: auto;
+    height: 2em;
+}
+/* ===============================
+portfolio Section Styling End
+=============================== */
+
+
+/* ===============================
+Skills Section Styling Start
+=============================== */
+.skills {
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    padding-top: 15vh;
+    background: var(--dark-color);
+}
+.skills .title {
+    color: #fff;
+}
+.skills .container {
+    display: flex;
+    min-height: 60vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 40px 10vh;
+}
+.skills .container .skill {
+    width: 220px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 40px;
+}
+.skills .container .skill .precent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.skills .container .skill .precent svg {
+    position: relative;
+    transform: rotate(270deg);
+    width: 150px;
+    height: 150px;
+}
+.skills .container .skill .precent svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: #000100;
+    transform: translate(5px, 5px);
+}
+.skills .container .skill .precent svg circle:nth-child(2) {
+    stroke: var(--main-color);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num))/100);
+    opacity: 0;
+}
+.skills.active .container .skill .precent svg circle:nth-child(2) {
+    animation: fadein 1s linear forwards !important;
+    animation-delay: 2s !important;
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.dot {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+}
+.skills.active .dot {
+    animation: animationDot 2s linear forwards;
+}
+.dot::before {
+    content: "";
+    position: absolute;
+    top: -5px; left: 50%;
+    transform: translateX(-50%) !important;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color),
+                0 0 30px var(--main-color);
+}
+.skills .number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+.skills.active .number {
+    animation: fadein 1s linear forwards !important;
+    animation-delay: 2s !important;
+}
+@keyframes animationDot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+.skills .number h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.skills .number h2 span {
+    font-weight: 300;
+    color: #fff;
+    font-size: .5em;
+}
+.skills .number p {
+    margin-top: 5px;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+/* ===============================
+Skills Section Styling End
+=============================== */
+
+
+/* ===============================
+Contact Section Styling Start
+=============================== */
+.contact {
+    height: fit-content;
+    margin-top: -5vh;
+}
+/* works */
+.contact .works {
+    min-height: 100vh;
+    height: fit-content;
+}
+.contact .works .title {
+    padding: 15vh 0 5vh;
+}
+.contact .works .container {
+    padding: 0 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 5vh;
+}
+.contact .works .container .card {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px -2px var(--dark-color);
+    transition: all 0.3s ease-in-out;
+}
+.contact .works .container .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover !important;
+    border-radius: 10px;    
+    z-index: 10;
+}
+.contact .works .container .card p {
+    position: absolute;
+    padding: 10px;    
+    background: var(--dark-color);
+    color: var(--main-color);
+    text-transform: uppercase;
+    border-top-left-radius: 10px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+.contact .works .container .card:hover {
+    box-shadow: 0 0 15px -2px var(--dark-color);
+}
+.contact .works .container .card:hover p {
+    opacity: 1;
+}
+/* map */
+.map iframe {
+    width: 100%;
+    margin-top: 5vh;
+}
+/* footer */
+.footer {
+    width: 100%;
+    margin-top: -10px;
+    padding: 0 5vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--dark-color);
+}
+.footer .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footer .row .col {
+    margin: 40px;
+}
+.footer .row .col.logo {
+    letter-spacing: 10px;
+    font-size: 5em;
+}
+.footer .row .col ul li {
+    color: #fff;
+    margin-bottom: 20px;
+    display: flex;
+}
+.footer .row .col ul li a {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.footer .row .col ul li a:hover {
+    color: var(--main-color);
+}
+.footer .row .col .footer-title {
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-right: 5px;
+}
+.footer .row.media {
+    justify-content: center;
+    border-bottom: 2px solid #fff;
+}
+.footer .row.media a {
+    color: #fff;
+    font-size: 3em;
+    margin: 0 40px;
+    transition: all 0.3s ease-in-out;
+}
+.footer .row.media a:hover {
+    color: var(--main-color);
+}
+/* copyright */
+.copyright {
+    width: 100%;
+    padding: 2vh 0;
+}
+#year {
+    color: #fff ;
+    text-align: center;
+    width: 100%;
+
+}
+/* ===============================
+Contact Section Styling End
+=============================== */
+
+
+/* ===============================
+Responsive Section Styling Start
+=============================== */
+@media (max-width: 928px) {
+    .home {
+        padding-top: 90px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .home {
+        padding-top: 50px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .home .lorem {
+        width: 100%;
+    }
+    .close, .menue {
+        display: block;
+    }
+    .close {
+        position: absolute;
+        top: 1em; right: 1em;
+        font-size: 3em;
+    }
+    nav {
+        padding: 10px;
+    }
+    nav ul {
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transform: translateY(50%);
+        background: var(--dark-color);
+        margin-top: -74px;
+        margin-left: -10px;
+        left: -100%;
+        transition: all 0.3s ease-in-out;
+    }
+    nav ul.active {
+        left: .7em;
+    }
+    nav ul li {
+        margin: 15px auto;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    nav ul.active li {
+        animation: opacity 2.5s ease-in-out;
+        animation-delay: var(--delay);
+    }
+    @keyframes opacity {
+        from { 
+            opacity: 0;
+            display: none;
+        }
+        to { 
+            opacity: 1; 
+            display: block;
+        }
+    }
+}
+@media (max-width: 532px){
+    body {
+        font-size: 11px;
+    }
+    .btns {
+        margin-top: 5px;
+        justify-content: center;
+    }
+}
+/* ===============================
+Responsive Section Styling End
+=============================== */
